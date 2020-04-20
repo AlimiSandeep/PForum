@@ -51,7 +51,7 @@ public class OtherPageController {
 
 	@RequestMapping("/saveContactus.pforum")
 	public ModelAndView saveContactUs(Contactus contactus) {
-//		System.out.println(contactus);
+
 		ModelAndView modelAndView = new ModelAndView();
 		String msg = pforumServiceIface.saveContactUs(contactus);
 		modelAndView.addObject("msg", msg);

@@ -18,6 +18,15 @@ public class ReportQuestion {
 	private int reportId;
 	String reportStatement;
 	private int quesId;
+	private String reportedBy;
+
+	public String getReportedBy() {
+		return reportedBy;
+	}
+
+	public void setReportedBy(String reportedBy) {
+		this.reportedBy = reportedBy;
+	}
 
 	@ManyToOne
 	@JsonIgnore
@@ -59,7 +68,7 @@ public class ReportQuestion {
 	@Override
 	public String toString() {
 		return "ReportQuestion [reportId=" + reportId + ", reportStatement=" + reportStatement + ", quesId=" + quesId
-				+ ", rQuestion=" + rQuestion + "]";
+				+ ", reportedBy=" + reportedBy + ", rQuestion=" + rQuestion + "]";
 	}
 
 }

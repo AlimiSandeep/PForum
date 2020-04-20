@@ -20,6 +20,8 @@ public class ReportAnswer {
 	private int quesId;
 	private int ansId;
 
+	private String reportedBy;
+
 	@ManyToOne
 	@JsonIgnore
 	@JoinColumn(name = "ansId", referencedColumnName = "ansId", insertable = false, updatable = false)
@@ -29,6 +31,14 @@ public class ReportAnswer {
 	@JsonIgnore
 	@JoinColumn(name = "quesId", referencedColumnName = "questionId", insertable = false, updatable = false)
 	private Question rQuesId;
+
+	public String getReportedBy() {
+		return reportedBy;
+	}
+
+	public void setReportedBy(String reportedBy) {
+		this.reportedBy = reportedBy;
+	}
 
 	public int getReportId() {
 		return reportId;
@@ -81,7 +91,8 @@ public class ReportAnswer {
 	@Override
 	public String toString() {
 		return "ReportAnswer [reportId=" + reportId + ", reportStatement=" + reportStatement + ", quesId=" + quesId
-				+ ", ansId=" + ansId + ", rAnswer=" + rAnswer + ", rQuesId=" + rQuesId + "]";
+				+ ", ansId=" + ansId + ", reportedBy=" + reportedBy + ", rAnswer=" + rAnswer + ", rQuesId=" + rQuesId
+				+ "]";
 	}
 
 }

@@ -40,7 +40,7 @@ public class Answer {
 	@Column
 	private int qid;
 
-	@OneToMany(mappedBy = "rAnswer", cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "rAnswer", cascade = CascadeType.ALL)
 	@JsonIgnore
 	private List<ReportAnswer> reportAnswer;
 

@@ -287,13 +287,13 @@ body {
 												<span>Question:</span>${question.getQuestion()}</div>
 											<form method="post" action="reportquestion.pforum">
 												<div class="form-group">
-													<input type="hidden" name="qid"
+													<input type="hidden" name="quesId"
 														value="${question.getQuestionId()}" />
 														 <input
-														type="hidden" name="username"
+														type="hidden" name="reportedBy"
 														value="${uCurrent.getUserName()}" />
 													<textarea class="form-control" rows="5" id="report"
-														name="report"
+														name="reportStatement"
 														placeholder="please enter reason for reporting..."></textarea>
 												</div>
 												<button type="submit" class="btn btn-primary btn-lg">Submit</button>
@@ -347,13 +347,13 @@ body {
 														<span>Answer:</span>${obj.getAnswer()}</div>
 													<form method="post" action="reportanswer.pforum">
 														<div class="form-group">
-															<input name="qid" type="hidden"
+															<input name="quesId" type="hidden"
 																value="${question.getQuestionId()}" /> <input
-																name="aid" type="hidden" value="${obj.getAnsId() }" />
-															<input name="username" type="hidden"
+																name="ansId" type="hidden" value="${obj.getAnsId() }" />
+															<input name="reportedBy" type="hidden"
 																value="${uCurrent.getUserName()}">
 															<textarea class="form-control" rows="5" id="report"
-																name="rptAns"
+																name="reportStatement"
 																placeholder="please enter reason for reporting..."></textarea>
 														</div>
 														<button type="submit" class="btn btn-primary btn-lg">Submit</button>

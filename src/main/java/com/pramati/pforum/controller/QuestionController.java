@@ -43,7 +43,7 @@ public class QuestionController {
 			@RequestParam("question") String question, HttpSession session) {
 		ModelAndView mv = new ModelAndView();
 		Employee curEmp = (Employee) session.getAttribute("curuser");
-		System.out.println(curEmp.toString());
+//		System.out.println(curEmp.toString());
 		Question q = new Question();
 		try {
 			q.setDatecreated(
@@ -156,24 +156,14 @@ public class QuestionController {
 	}
 
 	@RequestMapping("/reportquestion.pforum")
-	public String reportQuestion(@RequestParam("qid") String qid, @RequestParam("report") String report,
-			@RequestParam("username") String uname,HttpSession session) {
-		ReportQuestion reportQuestion = new ReportQuestion();
-		
-		System.out.println(uname);
-		reportQuestion.setQuesId(Integer.parseInt(qid));
-		reportQuestion.setReportStatement(report);
+	public String reportQuestion(ReportQuestion reportQuestion) {
+
 		pforumServiceIface.reportQuestion(reportQuestion);
 		return "redirect:mainpage.pforum";
 	}
 
 	@RequestMapping("/reportanswer.pforum")
-	public String reportAnswer(@RequestParam("qid") String qid, @RequestParam("aid") String aid,
-			@RequestParam("rptAns") String report, HttpSession session) {
-		ReportAnswer reportAnswer = new ReportAnswer();
-		reportAnswer.setQuesId(Integer.parseInt(qid));
-		reportAnswer.setAnsId(Integer.parseInt(aid));
-		reportAnswer.setReportStatement(report);
+	public String reportAnswer(ReportAnswer reportAnswer) {
 		pforumServiceIface.reportAnswer(reportAnswer);
 		return "redirect:mainpage.pforum";
 	}

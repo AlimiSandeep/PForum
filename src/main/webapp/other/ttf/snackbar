@@ -1,0 +1,27 @@
+======================backend side====================================================
+request.getSession().setAttribute("msg", "Question Added Succesfully !");
+		request.getSession().setAttribute("addCallSnackbar", "snackBarFunction()");   
+===============================Frontend side============================================
+   <link rel="stylesheet" href="other/css/snackbar.css" />
+<%
+String msg=session.getAttribute("msg").toString();
+if(!msg.isEmpty()){ %>
+<div id="snackbar"><%=msg %></div>
+<%} %>
+	<script>
+		function snackBarFunction() {
+			var x = document.getElementById("snackbar");
+			x.className = "show";
+			setTimeout(function() {
+				x.className = x.className.replace("show", "");
+			}, 3000);
+		}
+		<%
+		String snbarmsg=session.getAttribute("addCallSnackbar").toString();
+		if(snbarmsg!=""){ 
+		%>
+		<%=snbarmsg %>
+		<%
+		snbarmsg="";
+		}%>
+	</script>

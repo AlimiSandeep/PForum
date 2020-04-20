@@ -1,0 +1,53 @@
+@font-face{
+	font-family:rk;
+	src:url("../ttf/UberMove-Medium.TTF");
+	}
+  body{font-family:rk;}
+  .cat{background-color:#101010;color:white;text-align:right;border-bottom:1px solid #03A9F4;}
+  .row{padding:10px;margin:15px;}
+  .card{margin:5px;}
+  .list-group-item:first-child {
+    margin-bottom: 1px;
+}
+  .answer_button{color:white;background-color:black;border:2px solid black;padding:5px;border-radius:04px;transition:all 0.3s;}
+  .answer_button:hover{text-decoration:none;color:black;background-color:white;}
+  .fa-arrow-alt-circle-up{color:black;font-size:25px;padding:5px;transition:all 0.3s;}
+  .upvote{margin:0;font-size:20px;}
+  .fa-arrow-alt-circle-up:hover{color:#03A9F4;}
+  .fa-arrow-alt-circle-down{color:black;font-size:25px;padding:5px;transition:all 0.3s;}
+  .downvote{margin:0;font-size:20px;}
+  .fa-arrow-alt-circle-down:hover{color:#03A9F4;}
+  /* post */
+  .answers div{color:black;}
+  .answers div span{font-size:11px;}
+  .post{background:#f1f1f1ed;border:none;box-shadow: 6px 1px 10px #10101030;margin-top:28px;margin-bottom: 15px;}
+  .question-body{border-bottom:2px solid #9E9E9E;padding:0rem 0.5rem 0.5rem;}
+  .add_que_btn{padding:5px;}
+  .report_button{color:white;background-color:black;border:2px solid black;padding:2px;border-radius:04px;transition:all 0.3s;}
+  .report_button:hover{text-decoration:none;color:white;background-color:red;}
+  .user-info{box-shadow:none;padding:5px;}
+  .user-info ul{display:flex;list-style:none;margin:0;padding:0;}
+  .card-title{margin:0;}
+   .list-group{box-shadow:none;padding:5px;}
+  .list-group{display:flex;list-style:none;margin:0;padding:5px;}
+  .col-1{max-width:1;}
+  .well span{font-size:1.5vw;}
+  .well button{float:right;border:2px solid black;}
+  .answerbtn{background-color:#03A9F4;color:#ffffff;}
+  .answerbtn:hover{color:black;font-weight:bold;}
+  .reportbtn{background-color:#101010;color:#ffffff;}
+  .reportbtn:hover{color:red;}
+ .col{width:66%;}
+  @media (min-width: 320px) and (max-width: 480px) {
+  	.container-fluid{padding: 0;}
+  	.row{margin:0;padding: 0;}
+  	.col-1{display:none;}
+  	.col-2:nth-child(1){max-width:100%;flex:none;}
+  	.col{width:100%;flex:none;}
+  	.col-2:nth-child(2){display:none;}
+  	.answers div span{font-size:3vw;}
+  	.well span{font-size:5vw;}
+  	.well button{float:none;width:100%;height:60%;border:2px solid black;}
+  	.user-info ul li:nth-child(3){font-size:10px;}
+  	.spacerk{display:hidden;flex:none;margin:0;padding:10px;}
+	}	

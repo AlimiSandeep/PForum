@@ -1,0 +1,49 @@
+
+body{background-image:url('other/images/back4.jpg');background-size:100% 100%;background-repeat:no-repeat;margin:0;overflow:hidden;}
+.title{margin:0;top:40%;left:15%;text-align:center;font-size:120px;font-weight:bolder;position:absolute;font-family:rk;text-shadow: -1px 1px 14px #101010;}
+/* -----------LOGIN-----------------*/
+.login{background-color:black;width:20%;padding:10px;color:white;font-family:rk;position:absolute;top:29%;right:20%;border-radius:04px;font-size:20px;opacity:0.8;}
+.login center table tr td input[type=email]{font-size:20px;padding:5px;border:2px solid white;border-radius:04px;font-family:rk;}
+.login center table tr td input[type=password]{font-size:20px;padding:5px;border:2px solid white;border-radius:04px;font-family:rk;}
+.login center table tr td input[type=submit]{font-size:20px;padding:5px;margin-top:10px;border:2px solid white;background-color:#03A9F4;border-radius:02px;color:white;width:48%;margin:4px;}
+.login center table tr td input[type=reset]{font-size:20px;padding:5px;margin-top:10px;border:2px solid white;background-color:#03A9F4;border-radius:02px;color:white;width:48%;}
+.login center table tr td input[type=submit]:hover{background-color:green;}
+.login center table tr td input[type=reset]:hover{background-color:red;}
+.login center table tr td p{color:white;cursor:pointer;}
+@media (min-width: 320px) and (max-width: 480px) {
+	#particles-js{
+	display:none;
+	}
+  .title {
+    position: absolute;
+    top: 17%;
+    font-size: 16vw;
+    text-align: center;
+	}	
+	
+	.login {
+    width: 78%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+	}
+	
+	}
+	
+	@media (min-width: 481px) and (max-width: 1000px) {
+	
+  .title {
+    position: absolute;
+    top: 17%;
+    width:70%;
+    font-size: 10vw;
+    text-align: center;
+	}	
+	
+	.login {
+    width: 60%;top:45%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+	}
+	}

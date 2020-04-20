@@ -240,7 +240,7 @@ body {
 													<input type="hidden" name="qid"
 														value="${question.getQuestionId()}">
 													<textarea class="form-control" rows="5" id="comment"
-														name="answer" placeholder="Enter Answer..."></textarea>
+														name="answer" placeholder="Enter Answer..." required></textarea>
 												</div>
 												<button type="submit" class="btn btn-primary btn-lg">Submit
 													Answer</button>
@@ -294,7 +294,7 @@ body {
 														value="${uCurrent.getUserName()}" />
 													<textarea class="form-control" rows="5" id="report"
 														name="reportStatement"
-														placeholder="please enter reason for reporting..."></textarea>
+														placeholder="please enter reason for reporting..." required></textarea>
 												</div>
 												<button type="submit" class="btn btn-primary btn-lg">Submit</button>
 											</form>
@@ -354,7 +354,7 @@ body {
 																value="${uCurrent.getUserName()}">
 															<textarea class="form-control" rows="5" id="report"
 																name="reportStatement"
-																placeholder="please enter reason for reporting..."></textarea>
+																placeholder="please enter reason for reporting..." required></textarea>
 														</div>
 														<button type="submit" class="btn btn-primary btn-lg">Submit</button>
 													</form>

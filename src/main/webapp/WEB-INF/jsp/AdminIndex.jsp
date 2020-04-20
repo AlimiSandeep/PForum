@@ -30,17 +30,34 @@
 <script src="other/js/jquery.min.js"></script>
 <script src="other/js/bootstrap.min.js"></script>
 
-<script type="text/javascript">
-$(function () {
-	  $('#myModal').on('show.bs.modal', function (event) {
-	    var button = $(event.relatedTarget); // Button that triggered the modal
-	    var umail = button.data('usermail'); // Extract info from data-* attributes
-	 
-	    var modal = $(this);
-	    modal.find('#email').val(umail);
-	  });
-	});
 
+
+
+
+<script type="text/javascript">
+	$(function() {
+		$('#myModal').on('show.bs.modal', function(event) {
+			var button = $(event.relatedTarget); // Button that triggered the modal
+			var umail = button.data('usermail'); // Extract info from data-* attributes
+
+			var modal = $(this);
+			modal.find('#email').val(umail);
+		});
+	});
+	
+	//Keep Last Selected Bootstrap Tab Active on Page Refresh
+	$(document).ready(function() {
+	    if (location.hash) {
+	        $("a[href='" + location.hash + "']").tab("show");
+	    }
+	    $(document.body).on("click", "a[data-toggle='tab']", function(event) {
+	        location.hash = this.getAttribute("href");
+	    });
+	});
+	$(window).on("popstate", function() {
+	    var anchor = location.hash || $("a[data-toggle='tab']").first().attr("href");
+	    $("a[href='" + anchor + "']").tab("show");
+	});
 </script>
 
 <style>
@@ -181,7 +198,7 @@ textarea {
 
 	<jsp:include page="HeaderAdmin.jsp" />
 	<h4>${msg}</h4>
-	<ul class="nav nav-tabs">
+	<ul class="nav nav-tabs" id="myTab">
 		<li class="nav-item"><a class="nav-link active" data-toggle="tab"
 			href="#question">Reported Questions</a></li>
 		<li class="nav-item"><a class="nav-link" data-toggle="tab"
@@ -214,8 +231,8 @@ textarea {
 									<li style="font-size: 10px; color: #9E9E9E;">${allReportQues.quesCreateUserDesig}</li>
 								</ul>
 							<li style="width: 100%;"><a
-								href="admin/que/${allReportQues.quesId}.pforum"><div
-										class="deleteBtn"></div> </a></li>
+								href="admin/que/${allReportQues.quesId}.pforum"><span
+									class="deleteBtn"></span> </a></li>
 						</ul>
 					</div>
 					<div class="well">
@@ -249,10 +266,10 @@ textarea {
 									<li style="font-size: 10px; color: #9E9E9E;">${allReportAns.getDesign()}</li>
 								</ul>
 							<li style="width: 100%;"><a
-								href="admin/ans/${allReportAns.getAnswerId()}.pforum">
-									<div class="deleteBtn"\></div>
+								href="admin/ans/${allReportAns.getAnswerId()}.pforum"> <span
+									class="deleteBtn"></span>
 							</a></li>
-							
+
 						</ul>
 
 					</div>
@@ -292,7 +309,7 @@ textarea {
 					<li class="list-group-item reply btn btn-primary btn-lg"
 						data-toggle="modal" data-target="#myModal"
 						data-usermail="${obj.getEmail()}">Reply</li>
-				
+
 				</ul>
 			</c:forEach>
 			<form method="post" action="sendEmail">
@@ -309,11 +326,10 @@ textarea {
 							</div>
 
 							<div class="modal-body">
-								<input type="email" name="email" id="email"
-									readonly /><br />
-									
-								<textarea rows=5 type="text" name="replymsg"
-									placeholder="Enter Your Message"></textarea>
+								<input type="email" name="email" id="email" readonly /><br />
+
+								<textarea rows=5 name="replymsg"
+									placeholder="Enter Your Message" required></textarea>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-default"
@@ -327,6 +343,7 @@ textarea {
 				</div>
 			</form>
 		</div>
+	</div>
 </body>
 <script src="other/js/jquery.min.js"></script>
 <script src="other/js/bootstrap.min.js"></script>

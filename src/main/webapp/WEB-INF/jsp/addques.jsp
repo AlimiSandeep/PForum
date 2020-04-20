@@ -23,7 +23,7 @@
 			  </select>
 			</div>
 			<div class="form-group">
-			 <textarea class="form-control" rows="5" id="comment" name="question" placeholder="Enter Question..."></textarea>
+			 <textarea class="form-control" rows="5" id="comment" name="question" placeholder="Enter Question..." required></textarea>
 			</div>
 			<button type="submit" class="btn btn-primary btn-lg">Post Question</button>
 		</form>

@@ -5,9 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<script src="other/js/bootstrap.min.js"></script>
-<style>
-</style>
+<script src="other/js/bootstrap.min.js"></script>					
 </head>
 <body>
 	<div class="container-fluid">
@@ -34,6 +32,7 @@
 							<a class="dropdown-item" href="logout.pforum">Logout</a>
 						</div>
 					</li>
+					
 				</ul>
 			</div>
 		</nav>

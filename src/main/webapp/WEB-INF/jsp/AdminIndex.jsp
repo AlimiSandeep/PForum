@@ -198,7 +198,7 @@ textarea {
 
 	<jsp:include page="HeaderAdmin.jsp" />
 	<h4>${msg}</h4>
-	<ul class="nav nav-tabs" id="myTab">
+	<ul class="nav nav-tabs">
 		<li class="nav-item"><a class="nav-link active" data-toggle="tab"
 			href="#question">Reported Questions</a></li>
 		<li class="nav-item"><a class="nav-link" data-toggle="tab"
